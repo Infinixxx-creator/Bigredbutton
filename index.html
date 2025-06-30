@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Don't Push Me!</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    #button {
+      background-color: red;
+      color: white;
+      border: none;
+      font-size: 32px;
+      padding: 30px 60px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    #button:active {
+      transform: scale(0.98);
+    }
+    #counter {
+      margin-top: 40px;
+      font-size: 24px;
+    }
+  </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZD01D0MYTS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZD01D0MYTS');
+  </script>
+</head>
+<body>
+
+  <h1>DON’T PUSH ME</h1>
+  <button id="button">DON’T PUSH ME</button>
+
+  <div id="counter">
+    Clicks: <span id="clicks">0</span><br />
+    Simulated Earnings: $<span id="earnings">0.00</span>
+  </div>
+
+  <script>
+    let clicks = 0;
+    const clickDisplay = document.getElementById('clicks');
+    const earningsDisplay = document.getElementById('earnings');
+
+    document.getElementById('button').addEventListener('click', () => {
+      clicks++;
+      clickDisplay.textContent = clicks;
+      earningsDisplay.textContent = (clicks * 1).toFixed(2);
+
+      // Redirect to your Amazon Affiliate link
+      window.location.href = "https://www.amazon.com/?tag=Dontpushme100-20";
+    });
+  </script>
+
+
+<div style="margin-top: 60px;">
+  <a href="https://app.netlify.com/projects/bigredbutton/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/3a891a39-e8e9-46ae-a4e9-54460df8d5c4/deploy-status" alt="Netlify Status" />
+  </a>
+</div>
+
+</body>
+</html>
